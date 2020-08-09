@@ -1,3 +1,7 @@
+// This function will take the time as an integer, split as two arguements (hour and minutes)
+// It will then return the time in words
+// This code is garbage, far from dry and I'll need to come back to clean it but it was my first "medium" challenge completed :)
+
 function timeInWords(h, m) {
   let timeString;
 
