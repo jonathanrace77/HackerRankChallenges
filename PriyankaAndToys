@@ -1,0 +1,22 @@
+// Priyanka works for an international toy company that ships by container. Her task is to the determine the lowest cost way to combine her orders for shipping.
+// The requirement is that all items in a container are within 4 units of weight. (e.g 1-5, 15-19, 23-27 etc.)
+// this function takes in a list of weights (w).
+// It returns the number of containers needed to ship the toys.
+
+function toys(w) {
+    let containerCount = 1;
+    let shippingNum = 0
+
+    w.sort((a, b) => a - b);
+
+    for (let i = 0; i < w.length; i++) {
+        if (w[i] - w[shippingNum] > 4) {
+            shippingNum = i;
+            containerCount++;
+            i--;
+        }
+    }
+
+    return containerCount;
+
+}
